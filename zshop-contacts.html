@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./zshop.css" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <title>ZShop</title>
+</head>
+
+<body>
+    <div class="whole-section">
+        <header>
+            <div class="row">
+                <!-- <div class="header-image">
+                    <img src="./images/15.jpg" alt="header-image" />
+                </div> -->
+                <nav>
+                    <div class="logo">
+                        <img src="images/logo.png" />
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <a href="zshop-home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="zshop-about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="zshop-blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="zshop-contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="map-section">
+            <!--Start Map-->
+            <div id="map" style="height: 450px"></div>
+            <!--End Map-->
+        </section>
+        <!-- end of map section -->
+        <section class="contact-info">
+            <div class="contact-container2">
+                <div class="contact-form">
+                    <h3 class="t-center">Contact Form</h3>
+                    <form name="form1" id="ff" method="post" action="contact.php">
+                        <div class="contact-grid">
+                            <div class="user-name user">
+                                <input type="text" name="name" id="name" placeholder="Enter name" required="required" />
+                            </div>
+                            <div class="user-email user">
+                                <input type="email" name="email" id="email" placeholder="Enter email" required="required" />
+                            </div>
+                            <div class="user-subject user">
+                                <input type="text" name="subject" id="subject" placeholder="Subject" required="required" />
+                            </div>
+                            <div class="user-message">
+                                <textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <!-- endi of contact-grid -->
+                        <center>
+                            <input class="button button-skin" type="submit" name="Submit" value="Submit" />
+                        </center>
+                    </form>
+                </div>
+                <!-- end of contact-form -->
+            </div>
+            <!-- end of contact-container -->
+        </section>
+
+        <!-- __________________________________________________ -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="f-grid">
+                        <div class="footer-content">
+                            <h3 class="widget-title">About Us</h3>
+                            <p>
+                                Ut volutpat consectetur aliquam. Curabitur auctor in nis ulum ornare. Metus elit vehicula dui. Curabitur auctor in nis ulum ornare. Sed consequat, augue condimentum fermentum
+                            </p>
+
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium
+                            </p>
+                        </div>
+                    </div>
+                    <div class="f-grid">
+                        <div class="footer-content">
+                            <h3 class="widget-title">Recent Post</h3>
+                            <ul>
+                                <li><a href="#">MOST VISITED COUNTRIES</a></li>
+                                <li><a href="#">5 PLACES THAT MAKE A GREAT HOLIDAY</a></li>
+                                <li class="track">
+                                    <a href="#">PEBBLE TIME STEEL IS ON TRACK TO SHIP IN JULY</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >STARTUP COMPANY’S CO-FOUNDER TALKS ON HIS NEW PRODUCT</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="f-grid">
+              <div class="footer-content">
+                <h3 class="widget-title">Where to Find Us</h3>
+                <div class="row">
+                  <address>
+                    <strong>AUBERGE LONDON</strong>
+                    <br />
+                    Ut wisi enim
+                    <br />
+                    Minim veniam 12345
+                    <br />
+                    Exerci Tation
+                  </address>
+                  <br />
+                  <p>
+                    <strong>Opening Hours:</strong>
+                    <br />
+                    Mon - Fri: 9:00 - 21:00
+                    <br />
+                    Sat - Sun: 9:00 - 2:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer-grid -->
+        </div>
+        <div class="bottom-footer">
+          <div class="bottom-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#"><i class="fa fa-vimeo"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <div class="copyright">
+                            Copyright @ - Designed by
+                            <a href="https://www.zerotheme.com">ZEROTHEME</a>
+                        </div>
+                    </div>
+        </footer>
+
+        <script>
+            var marker;
+            var image = "images/map-marker.png";
+
+            function initMap() {
+                var myLatLng = {
+                    lat: 39.79,
+                    lng: -86.14,
+                };
+
+                // Specify features and elements to define styles.
+                var styleArray = [{
+                    featureType: "all",
+                    stylers: [{
+                        saturation: -80,
+                    }, ],
+                }, {
+                    featureType: "road.arterial",
+                    elementType: "geometry",
+                    stylers: [{
+                        hue: "#000000",
+                    }, {
+                        saturation: 50,
+                    }, ],
+                }, {
+                    featureType: "poi.business",
+                    elementType: "labels",
+                    stylers: [{
+                        visibility: "off",
+                    }, ],
+                }, ];
+
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    center: myLatLng,
+                    scrollwheel: false,
+                    // Apply the map style array to the map.
+                    styles: styleArray,
+                    zoom: 7,
+                });
+
+                var directionsDisplay = new google.maps.DirectionsRenderer({
+                    map: map,
+                });
+
+                // Create a marker and set its position.
+                marker = new google.maps.Marker({
+                    map: map,
+                    icon: image,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP,
+                    position: myLatLng,
+                });
+                marker.addListener("click", toggleBounce);
+            }
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap" async defer></script>
+        </div>
+        <!-- end of whole-section -->
+</body>
+
+</html>
